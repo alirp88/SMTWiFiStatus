@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SMTWiFiStatus_Example' do
+  pod 'SMTWiFiStatus', :path => '../'
+
+  target 'SMTWiFiStatus_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
