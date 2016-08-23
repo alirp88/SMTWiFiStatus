@@ -7,6 +7,7 @@
 //
 
 #import "SMTViewController.h"
+#import <SMTWiFiStatus/SMTWiFiStatus.h>
 
 @interface SMTViewController ()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSLog(@"%@", [SMTWiFiStatus isWiFiEnabled] ? @"Yes" : @"No");
+    NSLog(@"%@", [SMTWiFiStatus isWiFiConnected] ? @"Yes" : @"No");
+    NSLog(@"%@", [SMTWiFiStatus BSSID]);
+    NSLog(@"%@", [SMTWiFiStatus SSID]);
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

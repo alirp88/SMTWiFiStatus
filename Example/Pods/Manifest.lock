@@ -1,0 +1,16 @@
+PODS:
+  - SMTWiFiStatus (0.1.0)
+
+DEPENDENCIES:
+  - SMTWiFiStatus (from `../`)
+
+EXTERNAL SOURCES:
+  SMTWiFiStatus:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SMTWiFiStatus: b48a971bb130d674d6b71369e55190ee3d45720b
+
+PODFILE CHECKSUM: 8e96831f3bec5bfc629698f8dcc136324cd5cc4c
+
+COCOAPODS: 1.0.0

@@ -1,0 +1,6 @@
+framework module SMTWiFiStatus {
+  umbrella header "SMTWiFiStatus-umbrella.h"
+
+  export *
+  module * { export * }
+}

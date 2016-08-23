@@ -1,0 +1,6 @@
+framework module Pods_SMTWiFiStatus_Tests {
+  umbrella header "Pods-SMTWiFiStatus_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SMTWiFiStatus'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of SMTWiFiStatus.'
+  s.version          = '1.0.0'
+  s.summary          = 'SMTWiFiStatus is some funcitons to check for WiFi Status.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,16 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+SMTWiFiStatus is base on blog post in 'http://www.enigmaticape.com/blog/determine-wifi-enabled-ios-one-weird-trick' to help out developers to check for WiFi status of iOS nearby.
+DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/SMTWiFiStatus'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/alirp88/SMTWiFiStatus'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Ali Rp' => 'riahipour.ali@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/SMTWiFiStatus.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/alirp88/SMTWiFiStatus.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/alirp88'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SMTWiFiStatus/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'SMTWiFiStatus' => ['SMTWiFiStatus/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.source_files = 'SMTWiFiStatus/Classes/SMTWiFiStatus.*'
 end
