@@ -1,9 +1,13 @@
 # SMTWiFiStatus
 
-[![CI Status](http://img.shields.io/travis/Ali Rp/SMTWiFiStatus.svg?style=flat)](https://travis-ci.org/Ali Rp/SMTWiFiStatus)
+[![CI Status](http://img.shields.io/travis/alrip88/SMTWiFiStatus.svg?style=flat)](https://travis-ci.org/alirp88/SMTWiFiStatus)
 [![Version](https://img.shields.io/cocoapods/v/SMTWiFiStatus.svg?style=flat)](http://cocoapods.org/pods/SMTWiFiStatus)
 [![License](https://img.shields.io/cocoapods/l/SMTWiFiStatus.svg?style=flat)](http://cocoapods.org/pods/SMTWiFiStatus)
 [![Platform](https://img.shields.io/cocoapods/p/SMTWiFiStatus.svg?style=flat)](http://cocoapods.org/pods/SMTWiFiStatus)
+
+## Acknowledge 
+
+https://gist.github.com/enigmaticape/4e8d467571680a3bf774
 
 ## Example
 
@@ -19,10 +23,6 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "SMTWiFiStatus"
 ```
-
-## Author
-
-Ali Rp, riahipour.ali@gmail.com
 
 ## License
 
