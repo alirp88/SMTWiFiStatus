@@ -24,6 +24,7 @@
             }
         }
     }
+    freeifaddrs(interfaces);
     
     return [cset countForObject:@"awdl0"] > 1 ? YES : NO;
 }
