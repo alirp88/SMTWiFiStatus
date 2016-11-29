@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+#import "SMTWiFiStatus.h"
 
 #import <ifaddrs.h>
 #import <net/if.h>
@@ -6,7 +6,7 @@
 #import <arpa/inet.h>
 #import <SystemConfiguration/CaptiveNetwork.h>
 
-@interface SMTWiFiStatus : NSObject
+@interface SMTWiFiStatus ()
 
 
 @end
