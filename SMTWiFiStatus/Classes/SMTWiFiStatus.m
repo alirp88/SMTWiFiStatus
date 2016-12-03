@@ -30,11 +30,14 @@
 }
 
 + (NSDictionary *) wifiDetails {
+#ifndef TARGET_OS_SIMULATOR
     return
     (__bridge NSDictionary *)
+
     CNCopyCurrentNetworkInfo(
                              CFArrayGetValueAtIndex( CNCopySupportedInterfaces(), 0)
                              );
+#endif
 }
 
 + (BOOL) isWiFiConnected {
@@ -46,7 +49,9 @@
 }
 
 + (NSString *) SSID {
+#ifndef TARGET_OS_SIMULATOR
     return [SMTWiFiStatus wifiDetails][@"SSID"];
+#endif
 }
 
 @end
