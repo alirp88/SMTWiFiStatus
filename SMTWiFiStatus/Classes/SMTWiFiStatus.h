@@ -8,9 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, SMTWiFiPoweredState) {
+    SMTWiFiPoweredStateUnknown,
+    
+    SMTWiFiPoweredStateOn,
+    SMTWiFiPoweredStateOff,
+};
+
 @interface SMTWiFiStatus : NSObject
-+ (BOOL)       isWiFiEnabled;
-+ (BOOL)       isWiFiConnected;
-+ (NSString *) BSSID;
-+ (NSString *) SSID;
+/**
+ Returns SMTWiFiPoweredStateUnknown if state can not be evaluated (for example for old devices like iPhone 5),
+ else returns SMTWiFiPoweredStateOn and SMTWiFiPoweredStateOff accordingly to current WiFi powered state.
+ */
++ (SMTWiFiPoweredState) wifiPoweredState;
+
++ (BOOL)                isWiFiEnabled;
++ (BOOL)                isWiFiConnected;
++ (NSString *)          BSSID;
++ (NSString *)          SSID;
+
++ (BOOL)                hotspotEnabled;
 @end
