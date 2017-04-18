@@ -24,8 +24,8 @@ typedef NS_ENUM(NSUInteger, SMTWiFiPoweredState) {
 
 + (BOOL)                isWiFiEnabled;
 + (BOOL)                isWiFiConnected;
-+ (NSString *)          BSSID;
-+ (NSString *)          SSID;
++ (nullable NSString *) BSSID;
++ (nullable NSString *) SSID;
 
 + (BOOL)                hotspotEnabled;
 @end
