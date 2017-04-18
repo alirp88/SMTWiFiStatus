@@ -40,7 +40,9 @@
 }
 
 + (NSDictionary *) wifiDetails {
-#ifndef TARGET_OS_SIMULATOR
+#ifdef TARGET_OS_SIMULATOR
+    return NULL;
+#else
     return
     (__bridge NSDictionary *)
 
@@ -59,7 +61,9 @@
 }
 
 + (NSString *) SSID {
-#ifndef TARGET_OS_SIMULATOR
+#ifdef TARGET_OS_SIMULATOR
+    return NULL;
+#else
     return [SMTWiFiStatus wifiDetails][@"SSID"];
 #endif
 }
