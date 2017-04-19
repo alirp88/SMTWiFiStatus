@@ -39,8 +39,10 @@
     return [[self class] wifiPoweredState] == SMTWiFiPoweredStateOn;
 }
 
-+ (NSDictionary *) wifiDetails {
-#ifndef TARGET_OS_SIMULATOR
++ (nullable NSDictionary *) wifiDetails {
+#ifdef TARGET_OS_SIMULATOR
+    return NULL;
+#else
     return
     (__bridge NSDictionary *)
 
@@ -54,12 +56,14 @@
     return [SMTWiFiStatus wifiDetails] == nil ? NO : YES;
 }
 
-+ (NSString *) BSSID {
++ (nullable NSString *) BSSID {
     return [SMTWiFiStatus wifiDetails][@"BSSID"];
 }
 
-+ (NSString *) SSID {
-#ifndef TARGET_OS_SIMULATOR
++ (nullable NSString *) SSID {
+#ifdef TARGET_OS_SIMULATOR
+    return NULL;
+#else
     return [SMTWiFiStatus wifiDetails][@"SSID"];
 #endif
 }
@@ -75,7 +79,7 @@
     return NO;
 }
 
-+ (NSDictionary *) getIPAddresses {
++ (nonnull NSDictionary *) getIPAddresses {
     NSMutableDictionary *addresses = [NSMutableDictionary dictionaryWithCapacity:8];
     
     // retrieve the current interfaces - returns 0 on success
@@ -112,7 +116,7 @@
         // Free memory
         freeifaddrs(interfaces);
     }
-    return [addresses count] ? addresses : nil;
+    return addresses;
 }
 
 @end
