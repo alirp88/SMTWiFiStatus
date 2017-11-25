@@ -40,7 +40,7 @@
 }
 
 + (nullable NSDictionary *) wifiDetails {
-#ifdef TARGET_OS_SIMULATOR
+#if TARGET_OS_SIMULATOR
     return NULL;
 #else
     return
@@ -61,7 +61,7 @@
 }
 
 + (nullable NSString *) SSID {
-#ifdef TARGET_OS_SIMULATOR
+#if TARGET_OS_SIMULATOR
     return NULL;
 #else
     return [SMTWiFiStatus wifiDetails][@"SSID"];
